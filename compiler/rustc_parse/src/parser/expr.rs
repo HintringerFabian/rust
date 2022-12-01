@@ -2208,6 +2208,16 @@ impl<'a> Parser<'a> {
                     });
                     std::mem::replace(&mut cond, this.mk_expr_err(cond_span.shrink_to_hi()))
                 }
+
+                // I dont know if matching on Let(..) is the right thing to do here
+                ExprKind::Let(..) if this.token.is_keyword(kw::Else) => {
+                    println!("We have found our error");
+                    // i am not sure how to create an error message here
+
+                    // Until i know how to create an error message
+                    // i will return None to avoid crashing the compiler
+                    return None;
+                }
                 _ => {
                     return None;
                 }

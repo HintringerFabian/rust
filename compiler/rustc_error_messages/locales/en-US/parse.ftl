@@ -106,6 +106,9 @@ parse_if_expression_missing_condition = missing condition for `if` expression
     .condition_label = expected condition here
     .block_label = if this block is the condition of the `if` expression, then it must be followed by another block
 
+parse_if_expr_if_in_let_else = this `if` is not allowed in `let else`
+    .add_then_block = remove this `if`
+
 parse_expected_expression_found_let = expected expression, found `let` statement
 
 parse_expect_eq_instead_of_eqeq = expected `=`, found `==`

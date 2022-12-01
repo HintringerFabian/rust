@@ -359,6 +359,13 @@ pub(crate) struct IfExpressionMissingCondition {
 }
 
 #[derive(Diagnostic)]
+#[diag(parse_if_expr_if_in_let_else)]
+pub(crate) struct IfExpressionIfInLetElse {
+    // i have looked at the other diagnostics and
+    // im not sure how to generate a error struct
+}
+
+#[derive(Diagnostic)]
 #[diag(parse_expected_expression_found_let)]
 pub(crate) struct ExpectedExpressionFoundLet {
     #[primary_span]
